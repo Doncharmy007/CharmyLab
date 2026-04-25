@@ -3,23 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don Charmy Lab Pro</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Global Finance Converter</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; text-align: center; padding: 20px; }
+        .container { background: #1e293b; padding: 30px; border-radius: 15px; max-width: 400px; margin: auto; border: 1px solid #38bdf8; }
+        h1 { color: #38bdf8; font-size: 24px; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; font-size: 16px; }
+        button { width: 100%; padding: 12px; background: #38bdf8; color: #0f172a; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        #result { margin-top: 20px; font-size: 20px; font-weight: bold; color: #4ade80; }
+        .ad-slot { margin-top: 30px; min-height: 100px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1> DON CHARMY LAB$</h1>
-        
-        <div class="box">
-            <p id="password">Générez un accès sécurisé...</p>
-            <button onclick="generatePassword()">GÉNÉRER</button>
-        </div>
 
-        <div class="box">
-            <button class="wallet-btn" onclick="connectWallet()">CONNECT TRUST WALLET</button>
-        </div>
+    <div class="container">
+        <h1>Finance Converter</h1>
+        <p>Convertissez vos Devises et Cryptos</p>
+        
+        <input type="number" id="amount" placeholder="Montant..." value="1">
+        
+        <select id="from">
+            <option value="USD">USD (Dollar)</option>
+            <option value="BTC">Bitcoin</option>
+            <option value="EUR">Euro</option>
+        </select>
+        
+        <button onclick="convert()">Convertir Maintenant</button>
+        
+        <div id="result">---</div>
+
+        <div class="ad-slot" id="ad-banner">
+            </div>
     </div>
 
-    <script src="app.js"></script>
+    <div id="ad-scripts">
+        </div>
+
+    <script>
+        function convert() {
+            // Simulation de conversion simple pour l'exemple
+            let amount = document.getElementById('amount').value;
+            let from = document.getElementById('from').value;
+            let rate = (from === "BTC") ? 65000 : 1;
+            let total = amount * rate;
+            document.getElementById('result').innerText = total.toLocaleString() + " USDT";
+        }
+    </script>
+
 </body>
 </html>
