@@ -1,4 +1,4 @@
-8<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,9 @@
         body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; text-align: center; padding: 20px; }
         .container { background: #1e293b; padding: 30px; border-radius: 15px; max-width: 400px; margin: auto; border: 1px solid #38bdf8; }
         h1 { color: #38bdf8; font-size: 24px; }
-        input, select { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; font-size: 16px; }
-        button { width: 100%; padding: 12px; background: #38bdf8; color: #0f172a; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; font-size: 16px; background: #0f172a; color: white; }
+        button { width: 100%; padding: 12px; background: #38bdf8; color: #0f172a; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
         #result { margin-top: 20px; font-size: 20px; font-weight: bold; color: #4ade80; }
-        .ad-slot { margin-top: 30px; min-height: 100px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px; }
     </style>
 </head>
 <body>
@@ -19,37 +18,29 @@
     <div class="container">
         <h1>Finance Converter</h1>
         <p>Convertissez vos Devises et Cryptos</p>
-        
         <input type="number" id="amount" placeholder="Montant..." value="1">
-        
         <select id="from">
-            <option value="USD">USD (Dollar)</option>
             <option value="BTC">Bitcoin</option>
-            <option value="EUR">Euro</option>
+            <option value="USD">USD (Dollar)</option>
         </select>
-        
-        <button onclick="convert()">Convertir Maintenant</button>
-        
+        <button onclick="handleConversion()">Convertir Maintenant</button>
         <div id="result">---</div>
-
-        <div class="ad-slot" id="ad-banner">
-            </div>
     </div>
 
-    <div id="ad-scripts">
-        </div>
-<script src="https://pl29246288.profitablecpmratenetwork.com/a3/26/86/a32686cdf32e0116270e5a236b439ebe.js"></script>
-
     <script>
-        function convert() {
-            // Simulation de conversion simple pour l'exemple
+        function handleConversion() {
+            // 1. OUVRE LA PUB (TON REVENU)
+            // REMPLACE LE LIEN CI-DESSOUS PAR TON DIRECT LINK ADSTERRA
+            window.open("https://www.profitablecpmratenetwork.com/np2bs9um?key=0b396d2dc651dc53117a1bbea5cbba1b", "_blank");
+
+            // 2. FAIT LE CALCUL
             let amount = document.getElementById('amount').value;
             let from = document.getElementById('from').value;
-            let rate = (from === "BTC") ? 65000 : 1;
+            let rate = (from === "BTC") ? 65000 : 1; 
             let total = amount * rate;
             document.getElementById('result').innerText = total.toLocaleString() + " USDT";
         }
     </script>
-
 </body>
 </html>
+
